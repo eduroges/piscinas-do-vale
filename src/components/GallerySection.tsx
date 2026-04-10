@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import SectionTitle from "./SectionTitle";
 import { ChevronLeft, ChevronRight, X, Plus } from "lucide-react";
 import g1 from "@/assets/pool-gallery1.jpg";
-import g2 from "@/assets/pool-gallery2.jpg";
+import g2 from "@/assets/pool-gallery2.webp";
 import g3 from "@/assets/pool-gallery3.webp";
 import g4 from "@/assets/pool-masonry.jpg";
 import g5 from "@/assets/pool-concrete.jpg";
@@ -55,11 +55,11 @@ const GallerySection = () => {
             description="Conheça alguns dos nossos projetos já realizados e inspire-se para o seu."
           />
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {images.map((img, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               onClick={() => openLightbox(i)}
               className="overflow-hidden aspect-[4/3] group animate-on-scroll shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer rounded-sm"
               style={{ transitionDelay: `${(i % 3) * 150}ms` }}
@@ -94,32 +94,32 @@ const GallerySection = () => {
 
       {/* Lightbox Modal */}
       {selectedIdx !== null && (
-        <div 
+        <div
           className="fixed inset-0 z-[60] flex items-center justify-center bg-primary/95 backdrop-blur-xl animate-in fade-in duration-300"
           onClick={closeLightbox}
         >
-          <button 
+          <button
             className="absolute top-6 right-6 p-2 text-white/50 hover:text-white transition-colors z-10 bg-white/5 rounded-full backdrop-blur-md"
             onClick={closeLightbox}
           >
             <X size={32} />
           </button>
 
-          <button 
+          <button
             className="absolute left-4 md:left-8 p-3 text-white/50 hover:text-white transition-colors z-10 bg-white/5 rounded-full backdrop-blur-md"
             onClick={prevImage}
           >
             <ChevronLeft size={40} />
           </button>
 
-          <button 
+          <button
             className="absolute right-4 md:right-8 p-3 text-white/50 hover:text-white transition-colors z-10 bg-white/5 rounded-full backdrop-blur-md"
             onClick={nextImage}
           >
             <ChevronRight size={40} />
           </button>
 
-          <div 
+          <div
             className="relative max-w-[90vw] max-h-[85vh] flex items-center justify-center animate-in zoom-in-95 duration-500"
             onClick={(e) => e.stopPropagation()}
           >
@@ -128,7 +128,7 @@ const GallerySection = () => {
               alt={`Projeto de piscina ampliado ${selectedIdx + 1}`}
               className="max-w-full max-h-full object-contain shadow-2xl rounded-sm border border-white/10"
             />
-            
+
             <div className="absolute -bottom-10 left-0 right-0 text-center">
               <p className="text-white/60 text-sm tracking-widest uppercase font-light">
                 Projeto {selectedIdx + 1} de {images.length}

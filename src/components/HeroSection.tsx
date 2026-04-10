@@ -1,14 +1,18 @@
 import heroImg from "@/assets/hero-pool.jpg";
+import heroVideo from "@/assets/hero_video.mp4";
 
 const HeroSection = () => (
   <section id="hero" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-    <img
-      src={heroImg}
-      alt="Piscina de luxo com vista para o vale ao entardecer"
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
       className="absolute inset-0 w-full h-full object-cover"
-      width={1920}
-      height={1080}
-    />
+      poster={heroImg}
+    >
+      <source src={heroVideo} type="video/mp4" />
+    </video>
     <div className="absolute inset-0" style={{ background: "var(--hero-overlay)" }} />
     <div className="relative z-10 text-center max-w-4xl px-6">
       <p className="text-accent font-body text-sm tracking-[0.35em] uppercase mb-6 animate-on-scroll">
