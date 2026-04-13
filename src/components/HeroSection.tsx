@@ -1,16 +1,32 @@
-import heroImg from "@/assets/hero-pool.webp";
+import { useEffect, useRef } from "react";
+import heroVideo from "@/assets/video.mp4";
 
-const HeroSection = () => (
-  <section id="hero" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-    <div className="absolute inset-0 overflow-hidden">
-      <img 
-        src={heroImg} 
-        alt="Piscinas de Alto Padrão" 
-        className="w-full h-full object-cover"
-      />
-      <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/40 to-primary/90" />
-    </div>
+const HeroSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.7; // Subtle slow-motion effect
+    }
+  }, []);
+
+  return (
+    <section id="hero" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={heroVideo} type="video/mp4" />
+          Seu navegador não suporta vídeos em HTML5.
+        </video>
+        <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/40 to-primary/90" />
+      </div>
     <div className="relative z-10 text-center max-w-4xl px-6">
       <p className="text-accent font-body text-sm tracking-[0.35em] uppercase mb-6 animate-on-scroll">
         Excelência em piscinas de alto padrão
@@ -32,6 +48,7 @@ const HeroSection = () => (
       </a>
     </div>
   </section>
-);
+  );
+};
 
 export default HeroSection;
