@@ -8,8 +8,8 @@ const HeroSection = () => (
         alt="Piscinas de Alto Padrão" 
         className="w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-primary/40 mix-blend-multiply" />
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/20 to-primary/80" />
+      <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/40 to-primary/90" />
     </div>
     <div className="relative z-10 text-center max-w-4xl px-6">
       <p className="text-accent font-body text-sm tracking-[0.35em] uppercase mb-6 animate-on-scroll">
