@@ -35,8 +35,8 @@ const Navbar = () => {
           <img 
             src={logo} 
             alt="Piscinas do Vale" 
-            className={`w-auto transition-all duration-500 ${
-              scrolled ? "h-10 md:h-12" : "h-14 md:h-16"
+            className={`w-auto transition-all duration-500 opacity-85 ${
+              scrolled ? "h-12 md:h-14" : "h-20 md:h-24"
             }`}
           />
         </a>

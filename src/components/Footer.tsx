@@ -6,7 +6,7 @@ const Footer = () => (
     <div className="container relative z-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
         <div className="animate-on-scroll">
-          <img src={logo} alt="Piscinas do Vale" className="h-12 w-auto mb-6" />
+          <img src={logo} alt="Piscinas do Vale" className="h-20 w-auto mb-6" />
           <p className="text-primary-foreground/60 font-light text-sm leading-relaxed max-w-xs">
             Excelência em piscinas de alto padrão. Projetos que transformam espaços e proporcionam momentos inesquecíveis.
           </p>

@@ -1,19 +1,16 @@
-import heroImg from "@/assets/hero-pool.jpg";
-import heroVideo from "@/assets/hero_video.mp4";
+import heroImg from "@/assets/hero-pool.webp";
 
 const HeroSection = () => (
   <section id="hero" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      className="absolute inset-0 w-full h-full object-cover"
-      poster={heroImg}
-    >
-      <source src={heroVideo} type="video/mp4" />
-    </video>
-    <div className="absolute inset-0" style={{ background: "var(--hero-overlay)" }} />
+    <div className="absolute inset-0 overflow-hidden">
+      <img 
+        src={heroImg} 
+        alt="Piscinas de Alto Padrão" 
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-primary/40 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/20 to-primary/80" />
+    </div>
     <div className="relative z-10 text-center max-w-4xl px-6">
       <p className="text-accent font-body text-sm tracking-[0.35em] uppercase mb-6 animate-on-scroll">
         Excelência em piscinas de alto padrão
