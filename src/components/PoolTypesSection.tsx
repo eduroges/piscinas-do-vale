@@ -1,6 +1,6 @@
 import SectionTitle from "./SectionTitle";
-import poolMasonry from "@/assets/pool-masonry.jpg";
-import poolConcrete from "@/assets/pool-concrete.jpg";
+import poolMasonry from "@/assets/pool-masonry.webp";
+import poolConcrete from "@/assets/pool-concrete.webp";
 import poolVinyl from "@/assets/pool-vinyl.jpg";
 
 const pools = [
@@ -33,8 +33,8 @@ const PoolTypesSection = () => (
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {pools.map((pool, index) => (
-          <div 
-            key={pool.title} 
+          <div
+            key={pool.title}
             className="group overflow-hidden bg-white/40 backdrop-blur-sm border border-border shadow-sm hover:shadow-xl transition-all duration-500 animate-on-scroll"
             style={{ transitionDelay: `${index * 150}ms` }}
           >

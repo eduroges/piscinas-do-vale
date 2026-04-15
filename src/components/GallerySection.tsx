@@ -4,8 +4,8 @@ import { ChevronLeft, ChevronRight, X, Plus } from "lucide-react";
 import g1 from "@/assets/pool-gallery1.jpg";
 import g2 from "@/assets/pool-gallery2.webp";
 import g3 from "@/assets/pool-gallery3.webp";
-import g4 from "@/assets/pool-masonry.jpg";
-import g5 from "@/assets/pool-concrete.jpg";
+import g4 from "@/assets/pool-masonry.webp";
+import g5 from "@/assets/pool-concrete.webp";
 import g6 from "@/assets/pool-vinyl.jpg";
 
 const images = [g1, g2, g3, g4, g5, g6];

@@ -1,5 +1,5 @@
 import SectionTitle from "./SectionTitle";
-import poolServices from "@/assets/pool-services.jpg";
+import poolServices from "@/assets/pool-services.webp";
 import { Thermometer, Wrench, Filter, Waves } from "lucide-react";
 
 const services = [
@@ -32,8 +32,8 @@ const ServicesSection = () => (
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {services.map((s, index) => (
-            <div 
-              key={s.title} 
+            <div
+              key={s.title}
               className="flex gap-4 animate-on-scroll"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
