@@ -1,8 +1,22 @@
 import SectionTitle from "./SectionTitle";
+import domclor from "@/assets/domclor.webp";
+import genco from "@/assets/genco.webp";
+import hth from "@/assets/hth.webp";
+import maresias from "@/assets/maresias.webp";
+import panozon from "@/assets/panozon.webp";
+import sodramar from "@/assets/sodramar.webp";
+import syllent from "@/assets/syllent.webp";
+import tholz from "@/assets/tholz.webp";
 
-const brands = [
-  "Deca", "Jacuzzi", "Sodramar", "Fibra Mix", "Sibrape",
-  "Nautilus", "Pentair", "Fluidra", "IGUi", "Astralpool",
+const partnerLogos = [
+  { name: "Sodramar", src: sodramar },
+  { name: "HTH", src: hth },
+  { name: "Genco", src: genco },
+  { name: "Tholz", src: tholz },
+  { name: "Panozon", src: panozon },
+  { name: "Domclor", src: domclor },
+  { name: "Maresias", src: maresias },
+  { name: "Syllent", src: syllent },
 ];
 
 const BrandsSection = () => (
@@ -15,14 +29,18 @@ const BrandsSection = () => (
           description="Trabalhamos apenas com as melhores marcas do mercado para garantir qualidade e durabilidade."
         />
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 max-w-4xl mx-auto mt-8">
-        {brands.map((brand, index) => (
+      <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 max-w-5xl mx-auto mt-12">
+        {partnerLogos.map((brand, index) => (
           <div
-            key={brand}
-            className="px-8 py-4 border border-border bg-white/40 backdrop-blur-sm text-muted-foreground font-display text-lg font-medium hover:border-accent/50 hover:text-foreground transition-all hover:scale-105 animate-on-scroll"
+            key={brand.name}
+            className="flex items-center justify-center px-8 py-6 bg-white/50 backdrop-blur-sm border border-border/50 rounded-xl hover:border-accent/50 transition-all hover:scale-105 animate-on-scroll group"
             style={{ transitionDelay: `${index * 50}ms` }}
           >
-            {brand}
+            <img
+              src={brand.src}
+              alt={brand.name}
+              className="h-14 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+            />
           </div>
         ))}
       </div>
@@ -31,3 +49,4 @@ const BrandsSection = () => (
 );
 
 export default BrandsSection;
+
