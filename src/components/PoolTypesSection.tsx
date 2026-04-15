@@ -1,7 +1,7 @@
 import SectionTitle from "./SectionTitle";
 import poolMasonry from "@/assets/pool-masonry.webp";
 import poolConcrete from "@/assets/pool-concrete.webp";
-import poolVinyl from "@/assets/pool-vinyl.jpg";
+import poolVinyl from "@/assets/pool-vinyl.webp";
 
 const pools = [
   {
