@@ -3,13 +3,13 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.webp";
 
 const navItems = [
-  { label: "Início", href: "#hero" },
-  { label: "Sobre", href: "#about" },
-  { label: "Piscinas", href: "#pool-types" },
-  { label: "Diferenciais", href: "#differentials" },
-  { label: "Serviços", href: "#services" },
-  { label: "Galeria", href: "#gallery" },
-  { label: "Contato", href: "#contact" },
+  { label: "Início", href: "/#hero" },
+  { label: "Sobre", href: "/#about" },
+  { label: "Piscinas", href: "/#pool-types" },
+  { label: "Diferenciais", href: "/#differentials" },
+  { label: "Serviços", href: "/#services" },
+  { label: "Galeria", href: "/#gallery" },
+  { label: "Contato", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -31,7 +31,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <a href="#hero" className="relative z-10 block transition-transform hover:scale-105 active:scale-95">
+        <a href="/" className="relative z-10 block transition-transform hover:scale-105 active:scale-95">
           <img 
             src={logo} 
             alt="Piscinas do Vale" 

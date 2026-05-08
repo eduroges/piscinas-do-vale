@@ -69,17 +69,18 @@ const Footer = () => (
           <h4 className="font-display text-lg font-semibold text-primary-foreground mb-4">Links</h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
             {[
-              { l: "Início", h: "hero" },
-              { l: "Sobre", h: "about" },
-              { l: "Piscinas", h: "pool-types" },
-              { l: "Diferenciais", h: "differentials" },
-              { l: "Serviços", h: "services" },
-              { l: "Galeria", h: "gallery" },
-              { l: "Contato", h: "contact" }
+              { l: "Início", h: "/#hero" },
+              { l: "Sobre", h: "/#about" },
+              { l: "Piscinas", h: "/#pool-types" },
+              { l: "Diferenciais", h: "/#differentials" },
+              { l: "Serviços", h: "/#services" },
+              { l: "Galeria", h: "/#gallery" },
+              { l: "Projetos", h: "/projetos" },
+              { l: "Contato", h: "/#contact" }
             ].map((item) => (
               <a 
                 key={item.l} 
-                href={`#${item.h}`} 
+                href={item.h} 
                 className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent text-sm transition-all group"
               >
                 <ChevronRight size={14} className="text-accent/40 group-hover:text-accent transition-colors" />

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import SectionTitle from "./SectionTitle";
 import { ChevronLeft, ChevronRight, X, Plus } from "lucide-react";
+import { Link } from "react-router-dom";
 import g1 from "@/assets/pool-gallery1.jpg";
 import g2 from "@/assets/pool-gallery2.webp";
 import g3 from "@/assets/pool-gallery3.webp";
@@ -82,13 +83,13 @@ const GallerySection = () => {
         </div>
 
         <div className="mt-16 text-center animate-on-scroll delay-300">
-          <a
-            href="#"
+          <Link
+            to="/projetos"
             className="inline-flex items-center gap-2 bg-transparent border border-accent/30 text-accent px-10 py-4 text-sm font-semibold tracking-widest uppercase hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-105 active:scale-95 group"
           >
             Ver mais projetos
             <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </div>
       </div>
 
