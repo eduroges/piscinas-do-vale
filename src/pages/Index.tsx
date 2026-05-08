@@ -7,6 +7,7 @@ import ServicesSection from "@/components/ServicesSection";
 import SaunasSection from "@/components/SaunasSection";
 import CollectivePoolsSection from "@/components/CollectivePoolsSection";
 import GallerySection from "@/components/GallerySection";
+import ShowroomSection from "@/components/ShowroomSection";
 import BrandsSection from "@/components/BrandsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -37,6 +38,7 @@ const Index = () => {
         <Navbar />
         <HeroSection />
         <AboutSection />
+        <ShowroomSection />
         <PoolTypesSection />
         <DifferentialsSection />
         <ServicesSection />
