@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Instagram, Facebook, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.webp";
 
 const Footer = () => (
@@ -78,14 +79,25 @@ const Footer = () => (
               { l: "Projetos", h: "/projetos" },
               { l: "Contato", h: "/#contact" }
             ].map((item) => (
-              <a 
-                key={item.l} 
-                href={item.h} 
-                className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent text-sm transition-all group"
-              >
-                <ChevronRight size={14} className="text-accent/40 group-hover:text-accent transition-colors" />
-                {item.l}
-              </a>
+              item.h.startsWith("/#") ? (
+                <a 
+                  key={item.l} 
+                  href={item.h} 
+                  className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent text-sm transition-all group"
+                >
+                  <ChevronRight size={14} className="text-accent/40 group-hover:text-accent transition-colors" />
+                  {item.l}
+                </a>
+              ) : (
+                <Link 
+                  key={item.l} 
+                  to={item.h} 
+                  className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent text-sm transition-all group"
+                >
+                  <ChevronRight size={14} className="text-accent/40 group-hover:text-accent transition-colors" />
+                  {item.l}
+                </Link>
+              )
             ))}
           </div>
         </div>
