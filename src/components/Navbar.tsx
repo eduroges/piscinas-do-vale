@@ -8,7 +8,7 @@ const navItems = [
   { label: "Piscinas", href: "/#pool-types" },
   { label: "Diferenciais", href: "/#differentials" },
   { label: "Serviços", href: "/#services" },
-  { label: "Galeria", href: "/#gallery" },
+  { label: "Projetos", href: "/#gallery" },
   { label: "Contato", href: "/#contact" },
 ];
 

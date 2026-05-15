@@ -75,7 +75,6 @@ const Footer = () => (
               { l: "Piscinas", h: "/#pool-types" },
               { l: "Diferenciais", h: "/#differentials" },
               { l: "Serviços", h: "/#services" },
-              { l: "Galeria", h: "/#gallery" },
               { l: "Projetos", h: "/projetos" },
               { l: "Contato", h: "/#contact" }
             ].map((item) => (
